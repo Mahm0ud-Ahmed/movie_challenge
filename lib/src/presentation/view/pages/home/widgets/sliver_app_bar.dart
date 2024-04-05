@@ -20,32 +20,34 @@ class SliverAppBarWidget extends StatelessWidget {
       pinned: false,
       snap: true,
       expandedHeight: kAppBarHeight,
-      backgroundColor: kMainColor,
+      backgroundColor: Colors.transparent,
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(
-          kAppBarHeight / (context.isMobile ? 3.5 : 2),
+        preferredSize: const Size.fromHeight(
+          kAppBarHeight / 2,
         ),
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            color: kSecondaryColor,
-            borderRadius: BorderRadius.circular(context.sizeSide.smallSide),
-          ),
-          child: TabBar(
-            controller: tabController,
-            indicatorSize: TabBarIndicatorSize.tab,
-            overlayColor: MaterialStateProperty.resolveWith((states) => Colors.transparent),
-            padding: EdgeInsets.all(context.sizeSide.smallSide * 0.02),
-            indicator: BoxDecoration(
-              color: kTextSubColor,
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 16),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              color: kSecondaryColor,
               borderRadius: BorderRadius.circular(context.sizeSide.smallSide),
             ),
-            dividerColor: Colors.transparent,
-            
-            tabs: [
-              TapBarItem(title: S.of(context).home_page_tap_bar_now_playing_title),
-              TapBarItem(title: S.of(context).home_page_tap_bar_top_rated_title),
-              TapBarItem(title: S.of(context).home_page_tap_bar_search_movie_title),
-            ],
+            child: TabBar(
+              controller: tabController,
+              indicatorSize: TabBarIndicatorSize.tab,
+              overlayColor: MaterialStateProperty.resolveWith((states) => Colors.transparent),
+              padding: EdgeInsets.all(context.sizeSide.smallSide * 0.02),
+              indicator: BoxDecoration(
+                color: kTextSubColor,
+                borderRadius: BorderRadius.circular(context.sizeSide.smallSide),
+              ),
+              dividerColor: Colors.transparent,
+              tabs: [
+                TapBarItem(title: S.of(context).home_page_tap_bar_now_playing_title),
+                TapBarItem(title: S.of(context).home_page_tap_bar_top_rated_title),
+                TapBarItem(title: S.of(context).home_page_tap_bar_search_movie_title),
+              ],
+            ),
           ),
         ),
       ),

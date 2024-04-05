@@ -26,38 +26,35 @@ class SliverBodyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 32),
-      child: TabBarView(
-        controller: tabController,
-        children: [
-          RefreshIndicator(
-            onRefresh: () async => nowPlayingBloc.controller?.refresh(),
-            child: CustomScrollView(
-              slivers: [
-                SliverResponsivePaginationWidget(
-                  bloc: nowPlayingBloc,
-                  percentHight: context.orientationInfo.isPortrait ? 6 : 8.5,
-                  itemBuilder: (context, item, index) => MovieItemWidget(movie: item),
-                )
-              ],
-            ),
+    return TabBarView(
+      controller: tabController,
+      children: [
+        RefreshIndicator(
+          onRefresh: () async => nowPlayingBloc.controller?.refresh(),
+          child: CustomScrollView(
+            slivers: [
+              SliverResponsivePaginationWidget(
+                bloc: nowPlayingBloc,
+                percentHight: context.orientationInfo.isPortrait ? 6 : 8.5,
+                itemBuilder: (context, item, index) => MovieItemWidget(movie: item),
+              )
+            ],
           ),
-          RefreshIndicator(
-            onRefresh: () async => topRatedBloc.controller?.refresh(),
-            child: CustomScrollView(
-              slivers: [
-                SliverResponsivePaginationWidget(
-                  bloc: topRatedBloc,
-                  percentHight: context.orientationInfo.isPortrait ? 6 : 8.5,
-                  itemBuilder: (context, item, index) => MovieItemWidget(movie: item),
-                )
-              ],
-            ),
+        ),
+        RefreshIndicator(
+          onRefresh: () async => topRatedBloc.controller?.refresh(),
+          child: CustomScrollView(
+            slivers: [
+              SliverResponsivePaginationWidget(
+                bloc: topRatedBloc,
+                percentHight: context.orientationInfo.isPortrait ? 6 : 8.5,
+                itemBuilder: (context, item, index) => MovieItemWidget(movie: item),
+              )
+            ],
           ),
-          SearchMovieWidget(searchMovieBloc: searchMovieBloc),
-        ],
-      ),
+        ),
+        SearchMovieWidget(searchMovieBloc: searchMovieBloc),
+      ],
     );
   }
 }
