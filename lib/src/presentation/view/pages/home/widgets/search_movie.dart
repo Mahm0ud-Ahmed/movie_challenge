@@ -22,20 +22,17 @@ class SearchMovieWidget extends StatefulWidget {
 }
 
 class _SearchMovieWidgetState extends State<SearchMovieWidget> {
-  late final TextEditingController controller;
   late final ValueNotifier<bool> isWriteNotifier;
   String? oldKey;
 
   @override
   void initState() {
     super.initState();
-    controller = TextEditingController();
     isWriteNotifier = ValueNotifier<bool>(false);
   }
 
   @override
   void dispose() {
-    controller.dispose();
     isWriteNotifier.dispose();
     super.dispose();
   }
@@ -45,9 +42,8 @@ class _SearchMovieWidgetState extends State<SearchMovieWidget> {
     return Column(
       children: [
         GenericTextField(
-          controller: controller,
           hintText: S.of(context).home_page_tap_bar_search_movie_hint_text_field_title,
-          onChange: _onChanged,
+          onChange: handleSearch,
         ),
         16.h,
         ValueListenableBuilder(
@@ -83,7 +79,7 @@ class _SearchMovieWidgetState extends State<SearchMovieWidget> {
     );
   }
 
-  void _onChanged(String value) {
+  void handleSearch(String value) {
     if (oldKey != null) {
       EasyDebounce.cancel(oldKey ?? '');
     }
@@ -94,7 +90,7 @@ class _SearchMovieWidgetState extends State<SearchMovieWidget> {
         queries?['query'] = value;
         widget.searchMovieBloc.apiInfo?.queries = queries;
         widget.searchMovieBloc.controller?.refresh();
-        
+
         !isWriteNotifier.value ? isWriteNotifier.value = true : null;
       });
     } else {
