@@ -22,7 +22,6 @@ mixin _$LocalDataState {
     required TResult Function() loading,
     required TResult Function(List<MovieModel> data) success,
     required TResult Function(bool result) removeMovie,
-    required TResult Function(bool result) clear,
     required TResult Function(bool result) isExist,
     required TResult Function(bool result) successStoreMovie,
     required TResult Function(AppError? error) error,
@@ -34,7 +33,6 @@ mixin _$LocalDataState {
     TResult? Function()? loading,
     TResult? Function(List<MovieModel> data)? success,
     TResult? Function(bool result)? removeMovie,
-    TResult? Function(bool result)? clear,
     TResult? Function(bool result)? isExist,
     TResult? Function(bool result)? successStoreMovie,
     TResult? Function(AppError? error)? error,
@@ -46,7 +44,6 @@ mixin _$LocalDataState {
     TResult Function()? loading,
     TResult Function(List<MovieModel> data)? success,
     TResult Function(bool result)? removeMovie,
-    TResult Function(bool result)? clear,
     TResult Function(bool result)? isExist,
     TResult Function(bool result)? successStoreMovie,
     TResult Function(AppError? error)? error,
@@ -59,7 +56,6 @@ mixin _$LocalDataState {
     required TResult Function(LocalDataLoading value) loading,
     required TResult Function(LocalDataSuccess value) success,
     required TResult Function(LocalDataRemoveMovieSuccess value) removeMovie,
-    required TResult Function(LocalDataClearSuccess value) clear,
     required TResult Function(LocalDataExistMovieSuccess value) isExist,
     required TResult Function(LocalDataStoreMovieSuccess value)
         successStoreMovie,
@@ -72,7 +68,6 @@ mixin _$LocalDataState {
     TResult? Function(LocalDataLoading value)? loading,
     TResult? Function(LocalDataSuccess value)? success,
     TResult? Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult? Function(LocalDataClearSuccess value)? clear,
     TResult? Function(LocalDataExistMovieSuccess value)? isExist,
     TResult? Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult? Function(LocalDataError value)? error,
@@ -84,7 +79,6 @@ mixin _$LocalDataState {
     TResult Function(LocalDataLoading value)? loading,
     TResult Function(LocalDataSuccess value)? success,
     TResult Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult Function(LocalDataClearSuccess value)? clear,
     TResult Function(LocalDataExistMovieSuccess value)? isExist,
     TResult Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult Function(LocalDataError value)? error,
@@ -153,7 +147,6 @@ class _$LocalDataIdleImpl implements LocalDataIdle {
     required TResult Function() loading,
     required TResult Function(List<MovieModel> data) success,
     required TResult Function(bool result) removeMovie,
-    required TResult Function(bool result) clear,
     required TResult Function(bool result) isExist,
     required TResult Function(bool result) successStoreMovie,
     required TResult Function(AppError? error) error,
@@ -168,7 +161,6 @@ class _$LocalDataIdleImpl implements LocalDataIdle {
     TResult? Function()? loading,
     TResult? Function(List<MovieModel> data)? success,
     TResult? Function(bool result)? removeMovie,
-    TResult? Function(bool result)? clear,
     TResult? Function(bool result)? isExist,
     TResult? Function(bool result)? successStoreMovie,
     TResult? Function(AppError? error)? error,
@@ -183,7 +175,6 @@ class _$LocalDataIdleImpl implements LocalDataIdle {
     TResult Function()? loading,
     TResult Function(List<MovieModel> data)? success,
     TResult Function(bool result)? removeMovie,
-    TResult Function(bool result)? clear,
     TResult Function(bool result)? isExist,
     TResult Function(bool result)? successStoreMovie,
     TResult Function(AppError? error)? error,
@@ -202,7 +193,6 @@ class _$LocalDataIdleImpl implements LocalDataIdle {
     required TResult Function(LocalDataLoading value) loading,
     required TResult Function(LocalDataSuccess value) success,
     required TResult Function(LocalDataRemoveMovieSuccess value) removeMovie,
-    required TResult Function(LocalDataClearSuccess value) clear,
     required TResult Function(LocalDataExistMovieSuccess value) isExist,
     required TResult Function(LocalDataStoreMovieSuccess value)
         successStoreMovie,
@@ -218,7 +208,6 @@ class _$LocalDataIdleImpl implements LocalDataIdle {
     TResult? Function(LocalDataLoading value)? loading,
     TResult? Function(LocalDataSuccess value)? success,
     TResult? Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult? Function(LocalDataClearSuccess value)? clear,
     TResult? Function(LocalDataExistMovieSuccess value)? isExist,
     TResult? Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult? Function(LocalDataError value)? error,
@@ -233,7 +222,6 @@ class _$LocalDataIdleImpl implements LocalDataIdle {
     TResult Function(LocalDataLoading value)? loading,
     TResult Function(LocalDataSuccess value)? success,
     TResult Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult Function(LocalDataClearSuccess value)? clear,
     TResult Function(LocalDataExistMovieSuccess value)? isExist,
     TResult Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult Function(LocalDataError value)? error,
@@ -292,7 +280,6 @@ class _$LocalDataLoadingImpl implements LocalDataLoading {
     required TResult Function() loading,
     required TResult Function(List<MovieModel> data) success,
     required TResult Function(bool result) removeMovie,
-    required TResult Function(bool result) clear,
     required TResult Function(bool result) isExist,
     required TResult Function(bool result) successStoreMovie,
     required TResult Function(AppError? error) error,
@@ -307,7 +294,6 @@ class _$LocalDataLoadingImpl implements LocalDataLoading {
     TResult? Function()? loading,
     TResult? Function(List<MovieModel> data)? success,
     TResult? Function(bool result)? removeMovie,
-    TResult? Function(bool result)? clear,
     TResult? Function(bool result)? isExist,
     TResult? Function(bool result)? successStoreMovie,
     TResult? Function(AppError? error)? error,
@@ -322,7 +308,6 @@ class _$LocalDataLoadingImpl implements LocalDataLoading {
     TResult Function()? loading,
     TResult Function(List<MovieModel> data)? success,
     TResult Function(bool result)? removeMovie,
-    TResult Function(bool result)? clear,
     TResult Function(bool result)? isExist,
     TResult Function(bool result)? successStoreMovie,
     TResult Function(AppError? error)? error,
@@ -341,7 +326,6 @@ class _$LocalDataLoadingImpl implements LocalDataLoading {
     required TResult Function(LocalDataLoading value) loading,
     required TResult Function(LocalDataSuccess value) success,
     required TResult Function(LocalDataRemoveMovieSuccess value) removeMovie,
-    required TResult Function(LocalDataClearSuccess value) clear,
     required TResult Function(LocalDataExistMovieSuccess value) isExist,
     required TResult Function(LocalDataStoreMovieSuccess value)
         successStoreMovie,
@@ -357,7 +341,6 @@ class _$LocalDataLoadingImpl implements LocalDataLoading {
     TResult? Function(LocalDataLoading value)? loading,
     TResult? Function(LocalDataSuccess value)? success,
     TResult? Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult? Function(LocalDataClearSuccess value)? clear,
     TResult? Function(LocalDataExistMovieSuccess value)? isExist,
     TResult? Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult? Function(LocalDataError value)? error,
@@ -372,7 +355,6 @@ class _$LocalDataLoadingImpl implements LocalDataLoading {
     TResult Function(LocalDataLoading value)? loading,
     TResult Function(LocalDataSuccess value)? success,
     TResult Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult Function(LocalDataClearSuccess value)? clear,
     TResult Function(LocalDataExistMovieSuccess value)? isExist,
     TResult Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult Function(LocalDataError value)? error,
@@ -465,7 +447,6 @@ class _$LocalDataSuccessImpl implements LocalDataSuccess {
     required TResult Function() loading,
     required TResult Function(List<MovieModel> data) success,
     required TResult Function(bool result) removeMovie,
-    required TResult Function(bool result) clear,
     required TResult Function(bool result) isExist,
     required TResult Function(bool result) successStoreMovie,
     required TResult Function(AppError? error) error,
@@ -480,7 +461,6 @@ class _$LocalDataSuccessImpl implements LocalDataSuccess {
     TResult? Function()? loading,
     TResult? Function(List<MovieModel> data)? success,
     TResult? Function(bool result)? removeMovie,
-    TResult? Function(bool result)? clear,
     TResult? Function(bool result)? isExist,
     TResult? Function(bool result)? successStoreMovie,
     TResult? Function(AppError? error)? error,
@@ -495,7 +475,6 @@ class _$LocalDataSuccessImpl implements LocalDataSuccess {
     TResult Function()? loading,
     TResult Function(List<MovieModel> data)? success,
     TResult Function(bool result)? removeMovie,
-    TResult Function(bool result)? clear,
     TResult Function(bool result)? isExist,
     TResult Function(bool result)? successStoreMovie,
     TResult Function(AppError? error)? error,
@@ -514,7 +493,6 @@ class _$LocalDataSuccessImpl implements LocalDataSuccess {
     required TResult Function(LocalDataLoading value) loading,
     required TResult Function(LocalDataSuccess value) success,
     required TResult Function(LocalDataRemoveMovieSuccess value) removeMovie,
-    required TResult Function(LocalDataClearSuccess value) clear,
     required TResult Function(LocalDataExistMovieSuccess value) isExist,
     required TResult Function(LocalDataStoreMovieSuccess value)
         successStoreMovie,
@@ -530,7 +508,6 @@ class _$LocalDataSuccessImpl implements LocalDataSuccess {
     TResult? Function(LocalDataLoading value)? loading,
     TResult? Function(LocalDataSuccess value)? success,
     TResult? Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult? Function(LocalDataClearSuccess value)? clear,
     TResult? Function(LocalDataExistMovieSuccess value)? isExist,
     TResult? Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult? Function(LocalDataError value)? error,
@@ -545,7 +522,6 @@ class _$LocalDataSuccessImpl implements LocalDataSuccess {
     TResult Function(LocalDataLoading value)? loading,
     TResult Function(LocalDataSuccess value)? success,
     TResult Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult Function(LocalDataClearSuccess value)? clear,
     TResult Function(LocalDataExistMovieSuccess value)? isExist,
     TResult Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult Function(LocalDataError value)? error,
@@ -640,7 +616,6 @@ class _$LocalDataRemoveMovieSuccessImpl implements LocalDataRemoveMovieSuccess {
     required TResult Function() loading,
     required TResult Function(List<MovieModel> data) success,
     required TResult Function(bool result) removeMovie,
-    required TResult Function(bool result) clear,
     required TResult Function(bool result) isExist,
     required TResult Function(bool result) successStoreMovie,
     required TResult Function(AppError? error) error,
@@ -655,7 +630,6 @@ class _$LocalDataRemoveMovieSuccessImpl implements LocalDataRemoveMovieSuccess {
     TResult? Function()? loading,
     TResult? Function(List<MovieModel> data)? success,
     TResult? Function(bool result)? removeMovie,
-    TResult? Function(bool result)? clear,
     TResult? Function(bool result)? isExist,
     TResult? Function(bool result)? successStoreMovie,
     TResult? Function(AppError? error)? error,
@@ -670,7 +644,6 @@ class _$LocalDataRemoveMovieSuccessImpl implements LocalDataRemoveMovieSuccess {
     TResult Function()? loading,
     TResult Function(List<MovieModel> data)? success,
     TResult Function(bool result)? removeMovie,
-    TResult Function(bool result)? clear,
     TResult Function(bool result)? isExist,
     TResult Function(bool result)? successStoreMovie,
     TResult Function(AppError? error)? error,
@@ -689,7 +662,6 @@ class _$LocalDataRemoveMovieSuccessImpl implements LocalDataRemoveMovieSuccess {
     required TResult Function(LocalDataLoading value) loading,
     required TResult Function(LocalDataSuccess value) success,
     required TResult Function(LocalDataRemoveMovieSuccess value) removeMovie,
-    required TResult Function(LocalDataClearSuccess value) clear,
     required TResult Function(LocalDataExistMovieSuccess value) isExist,
     required TResult Function(LocalDataStoreMovieSuccess value)
         successStoreMovie,
@@ -705,7 +677,6 @@ class _$LocalDataRemoveMovieSuccessImpl implements LocalDataRemoveMovieSuccess {
     TResult? Function(LocalDataLoading value)? loading,
     TResult? Function(LocalDataSuccess value)? success,
     TResult? Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult? Function(LocalDataClearSuccess value)? clear,
     TResult? Function(LocalDataExistMovieSuccess value)? isExist,
     TResult? Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult? Function(LocalDataError value)? error,
@@ -720,7 +691,6 @@ class _$LocalDataRemoveMovieSuccessImpl implements LocalDataRemoveMovieSuccess {
     TResult Function(LocalDataLoading value)? loading,
     TResult Function(LocalDataSuccess value)? success,
     TResult Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult Function(LocalDataClearSuccess value)? clear,
     TResult Function(LocalDataExistMovieSuccess value)? isExist,
     TResult Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult Function(LocalDataError value)? error,
@@ -740,179 +710,6 @@ abstract class LocalDataRemoveMovieSuccess implements LocalDataState {
   bool get result;
   @JsonKey(ignore: true)
   _$$LocalDataRemoveMovieSuccessImplCopyWith<_$LocalDataRemoveMovieSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LocalDataClearSuccessImplCopyWith<$Res> {
-  factory _$$LocalDataClearSuccessImplCopyWith(
-          _$LocalDataClearSuccessImpl value,
-          $Res Function(_$LocalDataClearSuccessImpl) then) =
-      __$$LocalDataClearSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool result});
-}
-
-/// @nodoc
-class __$$LocalDataClearSuccessImplCopyWithImpl<$Res>
-    extends _$LocalDataStateCopyWithImpl<$Res, _$LocalDataClearSuccessImpl>
-    implements _$$LocalDataClearSuccessImplCopyWith<$Res> {
-  __$$LocalDataClearSuccessImplCopyWithImpl(_$LocalDataClearSuccessImpl _value,
-      $Res Function(_$LocalDataClearSuccessImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? result = null,
-  }) {
-    return _then(_$LocalDataClearSuccessImpl(
-      result: null == result
-          ? _value.result
-          : result // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$LocalDataClearSuccessImpl implements LocalDataClearSuccess {
-  const _$LocalDataClearSuccessImpl({required this.result});
-
-  @override
-  final bool result;
-
-  @override
-  String toString() {
-    return 'LocalDataState.clear(result: $result)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LocalDataClearSuccessImpl &&
-            (identical(other.result, result) || other.result == result));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, result);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LocalDataClearSuccessImplCopyWith<_$LocalDataClearSuccessImpl>
-      get copyWith => __$$LocalDataClearSuccessImplCopyWithImpl<
-          _$LocalDataClearSuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() idle,
-    required TResult Function() loading,
-    required TResult Function(List<MovieModel> data) success,
-    required TResult Function(bool result) removeMovie,
-    required TResult Function(bool result) clear,
-    required TResult Function(bool result) isExist,
-    required TResult Function(bool result) successStoreMovie,
-    required TResult Function(AppError? error) error,
-  }) {
-    return clear(result);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? idle,
-    TResult? Function()? loading,
-    TResult? Function(List<MovieModel> data)? success,
-    TResult? Function(bool result)? removeMovie,
-    TResult? Function(bool result)? clear,
-    TResult? Function(bool result)? isExist,
-    TResult? Function(bool result)? successStoreMovie,
-    TResult? Function(AppError? error)? error,
-  }) {
-    return clear?.call(result);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? loading,
-    TResult Function(List<MovieModel> data)? success,
-    TResult Function(bool result)? removeMovie,
-    TResult Function(bool result)? clear,
-    TResult Function(bool result)? isExist,
-    TResult Function(bool result)? successStoreMovie,
-    TResult Function(AppError? error)? error,
-    required TResult orElse(),
-  }) {
-    if (clear != null) {
-      return clear(result);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(LocalDataIdle value) idle,
-    required TResult Function(LocalDataLoading value) loading,
-    required TResult Function(LocalDataSuccess value) success,
-    required TResult Function(LocalDataRemoveMovieSuccess value) removeMovie,
-    required TResult Function(LocalDataClearSuccess value) clear,
-    required TResult Function(LocalDataExistMovieSuccess value) isExist,
-    required TResult Function(LocalDataStoreMovieSuccess value)
-        successStoreMovie,
-    required TResult Function(LocalDataError value) error,
-  }) {
-    return clear(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LocalDataIdle value)? idle,
-    TResult? Function(LocalDataLoading value)? loading,
-    TResult? Function(LocalDataSuccess value)? success,
-    TResult? Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult? Function(LocalDataClearSuccess value)? clear,
-    TResult? Function(LocalDataExistMovieSuccess value)? isExist,
-    TResult? Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
-    TResult? Function(LocalDataError value)? error,
-  }) {
-    return clear?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(LocalDataIdle value)? idle,
-    TResult Function(LocalDataLoading value)? loading,
-    TResult Function(LocalDataSuccess value)? success,
-    TResult Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult Function(LocalDataClearSuccess value)? clear,
-    TResult Function(LocalDataExistMovieSuccess value)? isExist,
-    TResult Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
-    TResult Function(LocalDataError value)? error,
-    required TResult orElse(),
-  }) {
-    if (clear != null) {
-      return clear(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LocalDataClearSuccess implements LocalDataState {
-  const factory LocalDataClearSuccess({required final bool result}) =
-      _$LocalDataClearSuccessImpl;
-
-  bool get result;
-  @JsonKey(ignore: true)
-  _$$LocalDataClearSuccessImplCopyWith<_$LocalDataClearSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -987,7 +784,6 @@ class _$LocalDataExistMovieSuccessImpl implements LocalDataExistMovieSuccess {
     required TResult Function() loading,
     required TResult Function(List<MovieModel> data) success,
     required TResult Function(bool result) removeMovie,
-    required TResult Function(bool result) clear,
     required TResult Function(bool result) isExist,
     required TResult Function(bool result) successStoreMovie,
     required TResult Function(AppError? error) error,
@@ -1002,7 +798,6 @@ class _$LocalDataExistMovieSuccessImpl implements LocalDataExistMovieSuccess {
     TResult? Function()? loading,
     TResult? Function(List<MovieModel> data)? success,
     TResult? Function(bool result)? removeMovie,
-    TResult? Function(bool result)? clear,
     TResult? Function(bool result)? isExist,
     TResult? Function(bool result)? successStoreMovie,
     TResult? Function(AppError? error)? error,
@@ -1017,7 +812,6 @@ class _$LocalDataExistMovieSuccessImpl implements LocalDataExistMovieSuccess {
     TResult Function()? loading,
     TResult Function(List<MovieModel> data)? success,
     TResult Function(bool result)? removeMovie,
-    TResult Function(bool result)? clear,
     TResult Function(bool result)? isExist,
     TResult Function(bool result)? successStoreMovie,
     TResult Function(AppError? error)? error,
@@ -1036,7 +830,6 @@ class _$LocalDataExistMovieSuccessImpl implements LocalDataExistMovieSuccess {
     required TResult Function(LocalDataLoading value) loading,
     required TResult Function(LocalDataSuccess value) success,
     required TResult Function(LocalDataRemoveMovieSuccess value) removeMovie,
-    required TResult Function(LocalDataClearSuccess value) clear,
     required TResult Function(LocalDataExistMovieSuccess value) isExist,
     required TResult Function(LocalDataStoreMovieSuccess value)
         successStoreMovie,
@@ -1052,7 +845,6 @@ class _$LocalDataExistMovieSuccessImpl implements LocalDataExistMovieSuccess {
     TResult? Function(LocalDataLoading value)? loading,
     TResult? Function(LocalDataSuccess value)? success,
     TResult? Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult? Function(LocalDataClearSuccess value)? clear,
     TResult? Function(LocalDataExistMovieSuccess value)? isExist,
     TResult? Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult? Function(LocalDataError value)? error,
@@ -1067,7 +859,6 @@ class _$LocalDataExistMovieSuccessImpl implements LocalDataExistMovieSuccess {
     TResult Function(LocalDataLoading value)? loading,
     TResult Function(LocalDataSuccess value)? success,
     TResult Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult Function(LocalDataClearSuccess value)? clear,
     TResult Function(LocalDataExistMovieSuccess value)? isExist,
     TResult Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult Function(LocalDataError value)? error,
@@ -1161,7 +952,6 @@ class _$LocalDataStoreMovieSuccessImpl implements LocalDataStoreMovieSuccess {
     required TResult Function() loading,
     required TResult Function(List<MovieModel> data) success,
     required TResult Function(bool result) removeMovie,
-    required TResult Function(bool result) clear,
     required TResult Function(bool result) isExist,
     required TResult Function(bool result) successStoreMovie,
     required TResult Function(AppError? error) error,
@@ -1176,7 +966,6 @@ class _$LocalDataStoreMovieSuccessImpl implements LocalDataStoreMovieSuccess {
     TResult? Function()? loading,
     TResult? Function(List<MovieModel> data)? success,
     TResult? Function(bool result)? removeMovie,
-    TResult? Function(bool result)? clear,
     TResult? Function(bool result)? isExist,
     TResult? Function(bool result)? successStoreMovie,
     TResult? Function(AppError? error)? error,
@@ -1191,7 +980,6 @@ class _$LocalDataStoreMovieSuccessImpl implements LocalDataStoreMovieSuccess {
     TResult Function()? loading,
     TResult Function(List<MovieModel> data)? success,
     TResult Function(bool result)? removeMovie,
-    TResult Function(bool result)? clear,
     TResult Function(bool result)? isExist,
     TResult Function(bool result)? successStoreMovie,
     TResult Function(AppError? error)? error,
@@ -1210,7 +998,6 @@ class _$LocalDataStoreMovieSuccessImpl implements LocalDataStoreMovieSuccess {
     required TResult Function(LocalDataLoading value) loading,
     required TResult Function(LocalDataSuccess value) success,
     required TResult Function(LocalDataRemoveMovieSuccess value) removeMovie,
-    required TResult Function(LocalDataClearSuccess value) clear,
     required TResult Function(LocalDataExistMovieSuccess value) isExist,
     required TResult Function(LocalDataStoreMovieSuccess value)
         successStoreMovie,
@@ -1226,7 +1013,6 @@ class _$LocalDataStoreMovieSuccessImpl implements LocalDataStoreMovieSuccess {
     TResult? Function(LocalDataLoading value)? loading,
     TResult? Function(LocalDataSuccess value)? success,
     TResult? Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult? Function(LocalDataClearSuccess value)? clear,
     TResult? Function(LocalDataExistMovieSuccess value)? isExist,
     TResult? Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult? Function(LocalDataError value)? error,
@@ -1241,7 +1027,6 @@ class _$LocalDataStoreMovieSuccessImpl implements LocalDataStoreMovieSuccess {
     TResult Function(LocalDataLoading value)? loading,
     TResult Function(LocalDataSuccess value)? success,
     TResult Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult Function(LocalDataClearSuccess value)? clear,
     TResult Function(LocalDataExistMovieSuccess value)? isExist,
     TResult Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult Function(LocalDataError value)? error,
@@ -1347,7 +1132,6 @@ class _$LocalDataErrorImpl implements LocalDataError {
     required TResult Function() loading,
     required TResult Function(List<MovieModel> data) success,
     required TResult Function(bool result) removeMovie,
-    required TResult Function(bool result) clear,
     required TResult Function(bool result) isExist,
     required TResult Function(bool result) successStoreMovie,
     required TResult Function(AppError? error) error,
@@ -1362,7 +1146,6 @@ class _$LocalDataErrorImpl implements LocalDataError {
     TResult? Function()? loading,
     TResult? Function(List<MovieModel> data)? success,
     TResult? Function(bool result)? removeMovie,
-    TResult? Function(bool result)? clear,
     TResult? Function(bool result)? isExist,
     TResult? Function(bool result)? successStoreMovie,
     TResult? Function(AppError? error)? error,
@@ -1377,7 +1160,6 @@ class _$LocalDataErrorImpl implements LocalDataError {
     TResult Function()? loading,
     TResult Function(List<MovieModel> data)? success,
     TResult Function(bool result)? removeMovie,
-    TResult Function(bool result)? clear,
     TResult Function(bool result)? isExist,
     TResult Function(bool result)? successStoreMovie,
     TResult Function(AppError? error)? error,
@@ -1396,7 +1178,6 @@ class _$LocalDataErrorImpl implements LocalDataError {
     required TResult Function(LocalDataLoading value) loading,
     required TResult Function(LocalDataSuccess value) success,
     required TResult Function(LocalDataRemoveMovieSuccess value) removeMovie,
-    required TResult Function(LocalDataClearSuccess value) clear,
     required TResult Function(LocalDataExistMovieSuccess value) isExist,
     required TResult Function(LocalDataStoreMovieSuccess value)
         successStoreMovie,
@@ -1412,7 +1193,6 @@ class _$LocalDataErrorImpl implements LocalDataError {
     TResult? Function(LocalDataLoading value)? loading,
     TResult? Function(LocalDataSuccess value)? success,
     TResult? Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult? Function(LocalDataClearSuccess value)? clear,
     TResult? Function(LocalDataExistMovieSuccess value)? isExist,
     TResult? Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult? Function(LocalDataError value)? error,
@@ -1427,7 +1207,6 @@ class _$LocalDataErrorImpl implements LocalDataError {
     TResult Function(LocalDataLoading value)? loading,
     TResult Function(LocalDataSuccess value)? success,
     TResult Function(LocalDataRemoveMovieSuccess value)? removeMovie,
-    TResult Function(LocalDataClearSuccess value)? clear,
     TResult Function(LocalDataExistMovieSuccess value)? isExist,
     TResult Function(LocalDataStoreMovieSuccess value)? successStoreMovie,
     TResult Function(LocalDataError value)? error,

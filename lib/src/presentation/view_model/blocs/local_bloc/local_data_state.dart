@@ -23,10 +23,6 @@ class LocalDataState with _$LocalDataState {
     required bool result,
   }) = LocalDataRemoveMovieSuccess;
 
-  const factory LocalDataState.clear({
-    required bool result,
-  }) = LocalDataClearSuccess;
-
   const factory LocalDataState.isExist({
     required bool result,
   }) = LocalDataExistMovieSuccess;

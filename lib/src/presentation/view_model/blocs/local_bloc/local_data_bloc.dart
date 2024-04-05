@@ -36,7 +36,7 @@ class LocalDataBloc extends Cubit<LocalDataState> {
     final DataState<bool> dataState = await localDb.clear();
     dataState.when(
       success: (successState) {
-        emit(const LocalDataIdle());
+        emit(const LocalDataSuccess(data: []));
       },
       failure: (errorState) {
         _emitError(errorState);
