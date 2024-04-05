@@ -95,7 +95,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
                   ),
                 );
               },
-              error: (value) => Center(child: TextWidget(text: value.error?.message ?? '')),
+              error: (value) => Center(child: TextWidget(text: value.error?.statusMessage ?? '')),
               orElse: () => const SizedBox.shrink(),
             );
           },

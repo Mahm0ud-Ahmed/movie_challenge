@@ -32,7 +32,7 @@ Widget errorDuringBrowsing(BuildContext context, PagingController controller, [b
         left: context.sizeSide.smallSide * 0.03),
     child: CustomErrorWidget(
       showImage: showImage,
-      message: (controller.error as AppError).message ?? '',
+      message: (controller.error as AppError).statusMessage ?? '',
       btnTitle: 'Retry',
       onTab: controller.refresh,
     ),

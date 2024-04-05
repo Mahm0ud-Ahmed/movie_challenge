@@ -23,49 +23,49 @@ class AppException implements Exception {
       switch (dioError.type) {
         case DioExceptionType.connectionTimeout:
           errorModel = ErrorModel(
-            code: dioError.response?.statusCode,
-            message: '$typeName${S.current.connect_timeout_message}',
+            statusCode: dioError.response?.statusCode,
+            statusMessage: '$typeName${S.current.connect_timeout_message}',
           );
           break;
         case DioExceptionType.sendTimeout:
           errorModel = ErrorModel(
-            code: dioError.response?.statusCode,
-            message: '$typeName${S.current.send_timeout_message}',
+            statusCode: dioError.response?.statusCode,
+            statusMessage: '$typeName${S.current.send_timeout_message}',
           );
           break;
         case DioExceptionType.receiveTimeout:
           errorModel = ErrorModel(
-            code: dioError.response?.statusCode,
-            message: '$typeName${S.current.receive_timeout_message}',
+            statusCode: dioError.response?.statusCode,
+            statusMessage: '$typeName${S.current.receive_timeout_message}',
           );
           break;
         case DioExceptionType.badCertificate:
           errorModel = ErrorModel(
-            code: dioError.response?.statusCode,
-            message: '$typeName${S.current.bad_certificate_message}',
+            statusCode: dioError.response?.statusCode,
+            statusMessage: '$typeName${S.current.bad_certificate_message}',
           );
           break;
         case DioExceptionType.connectionError:
           errorModel = ErrorModel(
-            code: dioError.response?.statusCode,
-            message: '$typeName${S.current.connection_error_message}',
+            statusCode: dioError.response?.statusCode,
+            statusMessage: '$typeName${S.current.connection_error_message}',
           );
           break;
         case DioExceptionType.cancel:
           errorModel = ErrorModel(
-            code: dioError.response?.statusCode,
-            message: '$typeName${S.current.cancel_error_message}',
+            statusCode: dioError.response?.statusCode,
+            statusMessage: '$typeName${S.current.cancel_error_message}',
           );
           break;
         case DioExceptionType.badResponse:
           if (dioError.response?.statusCode != null && dioError.response != null) {
             errorModel = ErrorModel.fromJson(dioError.response?.data);
-            errorModel.code == null ? errorModel = errorModel.copyWith(code: dioError.response?.statusCode) : null;
+            errorModel.statusCode == null ? errorModel = errorModel.copyWith(statusCode: dioError.response?.statusCode) : null;
           } else {
             String message = typeName + getErrorMessage(dioError.response?.statusCode);
             errorModel = ErrorModel(
-              message: message,
-              code: dioError.response?.statusCode,
+              statusMessage: message,
+              statusCode: dioError.response?.statusCode,
             );
           }
           break;
@@ -76,18 +76,18 @@ class AppException implements Exception {
           } else {
             message = S.current.unknown_error_message;
           }
-          errorModel = ErrorModel(message: message);
+          errorModel = ErrorModel(statusMessage: message);
           break;
       }
     }  else if (error is AppException && error.error is HiveError) {
       final HiveError hiveError = error.error;
-      errorModel = ErrorModel(message: hiveError.message);
+      errorModel = ErrorModel(statusMessage: hiveError.message);
     } 
     else if (error is TypeError && error.toString().contains('is not a subtype of type')) {
       AppLogger.logError(error);
-      errorModel = ErrorModel(message: S.current.error_occurred_while_processing_the_data_received_from_the_server_message);
+      errorModel = ErrorModel(statusMessage: S.current.error_occurred_while_processing_the_data_received_from_the_server_message);
     } else {
-      errorModel = ErrorModel(message: S.current.unknown_error_message);
+      errorModel = ErrorModel(statusMessage: S.current.unknown_error_message);
     }
     return errorModel;
   }

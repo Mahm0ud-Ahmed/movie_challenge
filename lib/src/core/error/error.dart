@@ -7,8 +7,8 @@ part 'error.g.dart';
 @freezed
 class AppError with _$AppError {
   const factory AppError({
-    final int? code,
-    final String? message,
+    final int? statusCode,
+    final String? statusMessage,
   }) = ErrorModel;
 
   factory AppError.fromJson(Map<String, dynamic> json) => _$AppErrorFromJson(json);

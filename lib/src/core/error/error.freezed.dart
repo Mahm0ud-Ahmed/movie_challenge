@@ -20,8 +20,8 @@ AppError _$AppErrorFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AppError {
-  int? get code => throw _privateConstructorUsedError;
-  String? get message => throw _privateConstructorUsedError;
+  int? get statusCode => throw _privateConstructorUsedError;
+  String? get statusMessage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +34,7 @@ abstract class $AppErrorCopyWith<$Res> {
   factory $AppErrorCopyWith(AppError value, $Res Function(AppError) then) =
       _$AppErrorCopyWithImpl<$Res, AppError>;
   @useResult
-  $Res call({int? code, String? message});
+  $Res call({int? statusCode, String? statusMessage});
 }
 
 /// @nodoc
@@ -50,17 +50,17 @@ class _$AppErrorCopyWithImpl<$Res, $Val extends AppError>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
-    Object? message = freezed,
+    Object? statusCode = freezed,
+    Object? statusMessage = freezed,
   }) {
     return _then(_value.copyWith(
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
+      statusCode: freezed == statusCode
+          ? _value.statusCode
+          : statusCode // ignore: cast_nullable_to_non_nullable
               as int?,
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
+      statusMessage: freezed == statusMessage
+          ? _value.statusMessage
+          : statusMessage // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -74,7 +74,7 @@ abstract class _$$ErrorModelImplCopyWith<$Res>
       __$$ErrorModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? code, String? message});
+  $Res call({int? statusCode, String? statusMessage});
 }
 
 /// @nodoc
@@ -88,17 +88,17 @@ class __$$ErrorModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
-    Object? message = freezed,
+    Object? statusCode = freezed,
+    Object? statusMessage = freezed,
   }) {
     return _then(_$ErrorModelImpl(
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
+      statusCode: freezed == statusCode
+          ? _value.statusCode
+          : statusCode // ignore: cast_nullable_to_non_nullable
               as int?,
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
+      statusMessage: freezed == statusMessage
+          ? _value.statusMessage
+          : statusMessage // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -107,19 +107,19 @@ class __$$ErrorModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ErrorModelImpl implements ErrorModel {
-  const _$ErrorModelImpl({this.code, this.message});
+  const _$ErrorModelImpl({this.statusCode, this.statusMessage});
 
   factory _$ErrorModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ErrorModelImplFromJson(json);
 
   @override
-  final int? code;
+  final int? statusCode;
   @override
-  final String? message;
+  final String? statusMessage;
 
   @override
   String toString() {
-    return 'AppError(code: $code, message: $message)';
+    return 'AppError(statusCode: $statusCode, statusMessage: $statusMessage)';
   }
 
   @override
@@ -127,13 +127,15 @@ class _$ErrorModelImpl implements ErrorModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorModelImpl &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.statusCode, statusCode) ||
+                other.statusCode == statusCode) &&
+            (identical(other.statusMessage, statusMessage) ||
+                other.statusMessage == statusMessage));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, code, message);
+  int get hashCode => Object.hash(runtimeType, statusCode, statusMessage);
 
   @JsonKey(ignore: true)
   @override
@@ -150,16 +152,16 @@ class _$ErrorModelImpl implements ErrorModel {
 }
 
 abstract class ErrorModel implements AppError {
-  const factory ErrorModel({final int? code, final String? message}) =
-      _$ErrorModelImpl;
+  const factory ErrorModel(
+      {final int? statusCode, final String? statusMessage}) = _$ErrorModelImpl;
 
   factory ErrorModel.fromJson(Map<String, dynamic> json) =
       _$ErrorModelImpl.fromJson;
 
   @override
-  int? get code;
+  int? get statusCode;
   @override
-  String? get message;
+  String? get statusMessage;
   @override
   @JsonKey(ignore: true)
   _$$ErrorModelImplCopyWith<_$ErrorModelImpl> get copyWith =>
