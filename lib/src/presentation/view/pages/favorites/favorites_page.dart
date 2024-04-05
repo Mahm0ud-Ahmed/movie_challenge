@@ -80,7 +80,10 @@ class _FavoritesPageState extends State<FavoritesPage> {
                               label: TextWidget(text: S.of(context).favorites_page_clear_btn_title),
                             ),
                             16.h,
-                            MovieItemWidget(movie: value.data[index]),
+                            MovieItemWidget(
+                              movie: value.data[index],
+                              onTap: () => pushMovieDetailsPage(context, value.data[index]),
+                            ),
                           ],
                         );
                       }
