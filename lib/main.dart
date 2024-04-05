@@ -17,23 +17,16 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider<ApiDataBloc>(
-          create: (context) => injector<ApiDataBloc>(),
-        ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: S.current.app_name,
+      theme: ThemeManager.myTheme,
+      themeMode: ThemeMode.light,
+      localizationsDelegates: const [
+        S.delegate,
+        AppLocalizationDelegate(),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: S.current.app_name,
-        theme: ThemeManager.myTheme,
-        themeMode: ThemeMode.light,
-        localizationsDelegates: const [
-          S.delegate,
-          AppLocalizationDelegate(),
-        ],
-        home: const HomePage(),
-      ),
+      home: const HomePage(),
     );
   }
 }

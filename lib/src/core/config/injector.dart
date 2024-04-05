@@ -7,7 +7,6 @@ import 'package:movie_challange/src/data/local/app_database.dart';
 
 import '../../data/remote/dio_api_service.dart';
 import '../../presentation/view_model/blocs/assistance/my_bloc_observer.dart';
-import '../../presentation/view_model/blocs/data_bloc/api_data_bloc.dart';
 import '../services/dio_service.dart';
 
 final injector = GetIt.instance;
@@ -26,6 +25,5 @@ Future<void> initializeDependencies() async {
 
   injector.registerSingleton<ThemeManager>(ThemeManager());
 
-  injector.registerFactory<ApiDataBloc>(() => ApiDataBloc());
   Bloc.observer = MyBlocObserver();
 }
