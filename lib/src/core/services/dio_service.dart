@@ -37,7 +37,7 @@ class DioService implements ServiceInterface {
       receiveTimeout: const Duration(minutes: 30),
       sendTimeout: const Duration(minutes: 15),
       receiveDataWhenStatusError: true,
-      // contentType: "application/json",
+      contentType: "application/json",
       headers: headers,
     );
     return baseOptions;
