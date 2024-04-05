@@ -41,33 +41,12 @@ class ImageWidget extends StatelessWidget {
 
   Widget buildImage(BuildContext context) {
     switch (image.runtimeType) {
-      /* case SvgGenImage:
-        return _buildSvgAsset(image);
-      case AssetGenImage:
-        return _buildImageAsset(image); */
       case const (String):
         return _buildImageNetwork(image);
       default:
         return const SizedBox.shrink();
     }
   }
-
-/*   SvgPicture _buildSvgAsset(SvgGenImage asset) {
-    return asset.svg(
-      fit: fit,
-      width: width,
-      height: height,
-      //alignment: alignment,
-    );
-  }
-
-  Image _buildImageAsset(AssetGenImage asset) {
-    return asset.image(
-      fit: fit,
-      width: width,
-      height: height,
-    );
-  } */
 
   dynamic _buildImageNetwork(String? url) {
     final urlImg = '$kBaseUrlImage$url';

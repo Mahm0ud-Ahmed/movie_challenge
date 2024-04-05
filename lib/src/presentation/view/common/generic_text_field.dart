@@ -5,13 +5,14 @@ class GenericTextField extends StatelessWidget {
   final String hintText;
   final Function(String)? onChange;
   final Function(String?)? onTab;
-  final TextEditingController controller;
+  final TextEditingController? controller;
 
   const GenericTextField({
     super.key,
     this.onChange,
     this.onTab,
-    required this.controller, required this.hintText,
+    this.controller,
+    required this.hintText,
   });
 
   @override
@@ -21,9 +22,8 @@ class GenericTextField extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         cursorColor: kTextPrimaryColor,
-        decoration:  InputDecoration(
+        decoration: InputDecoration(
           border: InputBorder.none,
-          
           filled: true,
           prefixIcon: const Icon(
             Icons.search,

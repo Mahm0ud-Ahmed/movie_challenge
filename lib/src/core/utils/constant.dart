@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart' show Color;
 
 const double kAppBarHeight = 56.0;
-
 const double kIconLargeSize = 160;
 
 const String kDBName = 'movies';

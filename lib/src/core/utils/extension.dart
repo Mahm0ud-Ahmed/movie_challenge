@@ -28,11 +28,6 @@ extension ContextServices on BuildContext {
 
   double get deviceWidth => sizeSide.smallSide > 768 ? 768 : sizeSide.smallSide;
 
-  double get statusBarHeight => switch (view.viewPadding.bottom) {
-        0.0 => view.viewPadding.top * 0.285, // Android
-        _ => view.viewPadding.bottom / 2, // IOS
-      };
-
   bool get isMobile => getDeviceScreenType == DeviceScreenType.mobile;
   bool get isTablet => getDeviceScreenType == DeviceScreenType.tablet;
 

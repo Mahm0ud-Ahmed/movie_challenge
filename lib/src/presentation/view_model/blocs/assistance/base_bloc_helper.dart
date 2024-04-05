@@ -3,9 +3,9 @@ import 'package:movie_challange/src/presentation/view_model/blocs/data_bloc/api_
 
 import '../../../../core/config/injector.dart';
 import '../../../../core/utils/api_info.dart';
-import '../../../../data/models/base/api_pagination_model.dart';
+import '../../../../data/models/api_pagination_model.dart';
 import '../../../../data/repositories/app_repository_imp.dart';
-import '../../../../data/repositories/i_remote_repository.dart';
+import '../../../../data/repositories/interfaces/i_remote_repository.dart';
 
 class BaseBlocHelper<MODEL> {
   final ApiDataBloc<MODEL> cubit;

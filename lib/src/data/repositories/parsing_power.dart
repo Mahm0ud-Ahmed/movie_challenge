@@ -1,4 +1,4 @@
-import '../models/base/api_pagination_model.dart';
+import '../models/api_pagination_model.dart';
 import 'model_type.dart';
 
 ApiPaginationModel<T> parseApiPagination<T>(ApiPaginationModel args) {

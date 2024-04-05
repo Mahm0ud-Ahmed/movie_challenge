@@ -6,7 +6,7 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import '../../../../core/error/error.dart';
 import '../../../../core/utils/api_info.dart';
 import '../../../../core/utils/data_state.dart';
-import '../../../../data/models/base/api_pagination_model.dart';
+import '../../../../data/models/api_pagination_model.dart';
 import '../assistance/base_bloc_helper.dart';
 import 'api_data_state.dart';
 

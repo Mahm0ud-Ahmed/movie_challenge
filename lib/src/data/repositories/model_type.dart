@@ -1,7 +1,7 @@
 // Project imports:
 import 'package:movie_challange/src/data/models/movie_model.dart';
 
-import '../models/base/api_pagination_model.dart';
+import '../models/api_pagination_model.dart';
 
 class ModelType {
   static dynamic getParseData<T>(Object? json) {

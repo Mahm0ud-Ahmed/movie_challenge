@@ -1,6 +1,6 @@
 import 'package:movie_challange/src/core/utils/data_state.dart';
 
-import '../models/movie_model.dart';
+import '../../models/movie_model.dart';
 
 abstract class LocalAppRepository {
   Future<DataState<bool>> store(MovieModel movie);

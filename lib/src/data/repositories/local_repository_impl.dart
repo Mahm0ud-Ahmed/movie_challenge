@@ -1,6 +1,6 @@
 import 'package:movie_challange/src/core/utils/data_state.dart';
 import 'package:movie_challange/src/data/local/app_database.dart';
-import 'package:movie_challange/src/data/repositories/i_local_repository.dart';
+import 'package:movie_challange/src/data/repositories/interfaces/i_local_repository.dart';
 
 import '../../core/error/app_exception.dart';
 import '../models/movie_model.dart';
